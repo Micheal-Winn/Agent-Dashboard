@@ -1,10 +1,11 @@
 
 import Image from 'next/image'
+import React from 'react'
 
 export default function Home() {
   return (
     <main>
-      <p className='text-6xl text-blue-700 font-bold'>hi</p>
+      <h1 className='text-6xl text-blue-400'>hi</h1>
     </main>
   )
 }
