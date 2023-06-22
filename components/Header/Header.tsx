@@ -12,21 +12,28 @@ import {
   NavLink,
   Text,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import Searchbar from "./Searchbar";
 import Noti from "./Noti";
 
 const Header = () => {
   const [opened, { toggle }] = useDisclosure(false);
   const label = opened ? "Close navigation" : "Open navigation";
+  const mediumScreen = useMediaQuery("(min-width:40em)");
   return (
     <section className="flex p-3 justify-between items-center sticky backdrop-blur-lg top-0 z-30">
       <h2 className="sm:text-3xl font-bold">Dashboard</h2>
       <Searchbar />
       <Noti />
-      <MediaQuery largerThan={"xs"} styles={{ display: "none" }}>
-        <Burger opened={opened} onClick={toggle} aria-label={label} />
-      </MediaQuery>
+
+      <Burger
+        opened={opened}
+        onClick={toggle}
+        aria-label={label}
+        sx={{
+          display: mediumScreen ? "none" : "block",
+        }}
+      />
 
       {/** Mobile NavLists */}
       <Drawer

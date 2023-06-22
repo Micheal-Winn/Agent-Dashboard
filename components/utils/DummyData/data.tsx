@@ -96,6 +96,106 @@ import {
       account: 2,
       status:"Active"
     },
+    {
+      id: "CUS000002",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Inactive"
+    },
+    {
+      id: "CUS000003",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Inactive"
+    },
+    {
+      id: "CUS000004",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Inactive"
+    },
+    {
+      id: "CUS000005",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Active"
+    },
+    {
+      id: "CUS000006",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Active"
+    },
+    {
+      id: "CUS000007",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Active"
+    },
+    {
+      id: "CUS000008",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Inactive"
+    },
+    {
+      id: "CUS000009",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Active"
+    },
+    {
+      id: "CUS000010",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Inactive"
+    },
+    {
+      id: "CUS000011",
+      profile:
+        "https://images.unsplash.com/photo-1620428268482-cf1851a36764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y2FydG9vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      name: "Thant Zin Win",
+      nrc: "5/MaMaNa(N)12345",
+      date: "12/12/2021",
+      account: 2,
+      status:"Inactive"
+    },
   ]
   
   export const tableData: Array<TableData> = [
