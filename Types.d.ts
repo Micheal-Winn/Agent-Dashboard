@@ -37,7 +37,7 @@ interface TableData{
 
 }
 
-export type DataForTable = {
+export type CustomerListTableColumns = {
     id: string;
     profile: string;
     name: string;
@@ -116,4 +116,15 @@ interface DatePickerTableProps{
     receiverNo:string,
     amount:number,
     date:string
+}
+
+interface CustomerAccountsColumnProps{
+    name:string,
+    nrc:string,
+    phone:string,
+    accountNo:string,
+    amount:number,
+    accountType:string,
+    createdDate:string,
+    status:ReactNode
 }

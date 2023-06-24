@@ -11,6 +11,7 @@ import { CustomerTableData } from "@/components/utils/DummyData/data";
 import { accountTableData } from "@/components/utils/DummyData/data";
 
 import TransactionDoughnutChart from "@/components/ChartComponents/transaction.doughnut.chart";
+import Footer from "@/components/Footer/Footer";
 const TransactionChartDynamic = dynamic(
   () => import("@/components/ChartComponents/transaction.chart"),
   { ssr: false }
@@ -23,7 +24,7 @@ export default function Home() {
     <main className="pl-2 overflow-y-scroll h-screen">
       <Header />
       <Card />
-      <section className="flex flex-col xl:flex-row gap-6 sm:gap-6 md:gap-8 lg:gap-6 xl:gap-[2%] pr-6 sm:pr-7 md:pr-6 lg:pr-7 xl:pr-0 2xl:pr-1 box-border pl-2 overflow-hidden">
+      <section className="flex flex-col xl:flex-row gap-6 sm:gap-6 md:gap-8 lg:gap-6 xl:gap-[2%] pb-12 mb-4 pr-6 sm:pr-7 md:pr-6 lg:pr-7 xl:pr-0 2xl:pr-1 box-border pl-2 overflow-hidden">
         <TransactionChartDynamic />
         <div className="flex flex-col w-full xl:w-[45%] gap-4">
           <div className="flex flex-col gap-4 py-3 px-3 rounded-lg xl:mt-6 2xl:mt-16 bg-white shadow-lg">
@@ -68,6 +69,7 @@ export default function Home() {
       </section>
       <CustomerDataTable data={CustomerTableData} columns={columns}/>
       <CustomerDataTable data={accountTableData} columns={accountColumns}/>
+      <Footer/>
     </main>
   );
 }

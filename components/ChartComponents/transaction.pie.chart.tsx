@@ -4,7 +4,7 @@ import ReactApexChart from "react-apexcharts";
 
 const TransactionPieChart = () => {
   return (
-    <section className="w-[100%]  sm:h-auto bg-white overflow-hidden mb-1 rounded-lg shadow-lg py-2 lg:pt-2 hidden sm:block">
+    <section className="w-[100%]  sm:h-auto bg-white overflow-hidden  rounded-lg shadow-lg py-2 lg:pt-2 hidden sm:block">
       <ReactApexChart
         type="donut"
         height={310}

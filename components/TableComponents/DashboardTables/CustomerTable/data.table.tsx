@@ -63,7 +63,7 @@ export function CustomerDataTable<TData, TValue>({
   });
 
   return (
-    <div className="space-y-3 mt-8 w-full pl-2 pr-6 sm:pr-8 md:pr-6 lg:pr-7 xl:pr-10 2xl:pr-12">
+    <div className="space-y-3 mb-8 w-full pl-2 pr-6 sm:pr-8 md:pr-6 lg:pr-7 xl:pr-10 2xl:pr-12">
       {/* <div className="rounded-md border w-full"> */}
         <Table>
           <TableHeader>

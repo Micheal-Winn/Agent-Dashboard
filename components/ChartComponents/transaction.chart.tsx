@@ -9,7 +9,7 @@ import {
 
 const TransactionChart = () => {
   return (
-    <section className="md:w-full xl:w-1/2 mb-1 mt-6 sm:mt-6 lg:mt-5 xl:mt-6 2xl:mt-16 flex flex-col gap-6 bg-white rounded-lg overflow-hidden shadow-lg pt-4 pl-4">
+    <section className="md:w-full xl:w-1/2  mt-6 sm:mt-6 lg:mt-5 xl:mt-6 2xl:mt-16 flex flex-col gap-6 bg-white rounded-lg overflow-hidden shadow-lg pt-4 pl-4">
       <p className="text-lg font-bold">Total Transactions</p>
       <div className="flex pr-4 sm:pr-12 md:pr-16 xl:pr-6 justify-between">
         <p className="text-base sm:text-3xl font-extrabold text-blue-800">

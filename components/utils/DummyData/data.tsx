@@ -1,7 +1,7 @@
 import {
     AccountTableData,
+    CustomerListTableColumns,
     DashboardCustomer,
-    DataForTable,
     DatePickerTableProps,
     MobileNavLists,
     NavLink,
@@ -281,7 +281,7 @@ import {
     },
   ];
   
-  export const customerLists: Array<DataForTable> = [
+  export const customerLists: Array<CustomerListTableColumns> = [
     {
       id: "CUS000001",
       profile:
