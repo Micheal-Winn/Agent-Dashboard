@@ -17,7 +17,7 @@ const Button:React.FC<ButtonProps> = ({
     <button
       {...{ type }}
       onClick={handler}
-      className={`flex items-center gap-2 ${bg} ${textColor} ${border} ${padding} text-sm font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed cursor-pointer`}
+      className={`flex items-center justify-center gap-2 ${bg} ${textColor} ${border} ${padding} text-sm font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed cursor-pointer`}
       aria-label="Customise options"
       disabled={disabled}
     >

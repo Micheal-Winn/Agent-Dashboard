@@ -7,7 +7,7 @@ const CustomerAccoutLayoutPage = ({
   children:React.ReactNode;
 }) => {
 return (
- <main>
+ <main className='h-screen overflow-hidden'>
   <Header/>
   {children}
  </main>

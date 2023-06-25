@@ -1,31 +1,46 @@
-"use client"
+"use client";
 
 import React from "react";
 import Button from "@/components/ButtonComponents/customer.list.button";
 import CustomerFillField from "@/components/CustomerListsComponents/customer.field";
 import { useForm } from "@mantine/form";
 import { DateInput } from "@mantine/dates";
-import { Select, Breadcrumbs, Anchor ,Text } from "@mantine/core";
+import { Select, Breadcrumbs, Anchor, Text } from "@mantine/core";
 import Link from "next/link";
+
+// const links = [
+//   {
+//     title: "Customer Lists",
+//     href: "/customer",
+//   },
+//   {
+//     title: "Create",
+//     href: "/customer/create",
+//   },
+// ].map((link, i) => (
+//   <Link href={link.href} key={i} className="hover:text-blue-700 hover:underline font-semibold text-gray-800 text-2xl mt-3">
+//     {link.title}
+//   </Link>
+// ));
 
 const links = [
   {
     title: "Customer Lists",
-    href: "/customer",
   },
   {
-    title: "Create",
-    href: "/customer/create",
+    title: "Create Customer Account",
   },
 ].map((link, i) => (
-  <Link href={link.href} key={i} className="hover:text-blue-700 hover:underline font-semibold text-gray-800 text-2xl mt-3">
+  <Text
+    key={i}
+    className="text-gray-800 text-xs sm:text-sm xl:text-2xl mt-3 font-semibold hover:underline"
+  >
     {link.title}
-  </Link>
+  </Text>
 ));
 
 const CreateCustomerPage = () => {
-
-  const cutomerForm = useForm({
+  const customerForm = useForm({
     initialValues: {
       fullName: "",
       nrc: "",
@@ -59,64 +74,93 @@ const CreateCustomerPage = () => {
       // value.
       jobTitle: (value) =>
         value.length < 2 ? "Name must have at least 2 letters" : null,
+      gender: (value) =>
+        value === "" ? "Please select the gender Type" : null,
     },
   });
 
+  const formSubmitHandler = (data: any) => {
+    console.log("customer Data", data);
+  };
+
   return (
     <section className="pl-8 pr-8 pt-8">
-      <Breadcrumbs className="flex items-center" separator={<Text className="text-2xl mt-3">/</Text>}>{links}</Breadcrumbs>
-      <form
-        className="p-8 w-[80%] mx-auto bg-white rounded-lg mt-14 shadow-lg"
-        onSubmit={() => {}}
+      <Breadcrumbs
+        className="flex items-center"
+        separator={<Text className="text-2xl mt-3">/</Text>}
       >
-        <div className="grid grid-cols-2 gap-x-14 gap-y-8">
+        {links}
+      </Breadcrumbs>
+      <form
+        className="p-8 w-full lg:w-[80%] mx-auto bg-white rounded-lg mt-14 shadow-lg"
+        onSubmit={customerForm.onSubmit(formSubmitHandler)}
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-14 gap-y-8">
           <CustomerFillField
             label="Full Name"
             placeholder="Enter Customer Full Name"
-            form={cutomerForm.getInputProps("fullName")}
+            form={customerForm.getInputProps("fullName")}
           />
-          <CustomerFillField label="NRC" placeholder="Enter Customer NRC"  form={cutomerForm.getInputProps("nrc")}/>
+          <CustomerFillField
+            label="NRC"
+            placeholder="Enter Customer NRC"
+            form={customerForm.getInputProps("nrc")}
+          />
           <CustomerFillField
             label="Phone Number"
             placeholder="Enter Customer Phone Number"
-            form={cutomerForm.getInputProps("phoneNo")}
+            form={customerForm.getInputProps("phoneNo")}
           />
-          <CustomerFillField label="Email" placeholder="Enter Customer Email" form={cutomerForm.getInputProps("email")} />
-          <CustomerFillField label="City" placeholder="Enter Customer City"  form={cutomerForm.getInputProps("city")}/>
+          <CustomerFillField
+            label="Email"
+            placeholder="Enter Customer Email"
+            form={customerForm.getInputProps("email")}
+          />
+          <CustomerFillField
+            label="City"
+            placeholder="Enter Customer City"
+            form={customerForm.getInputProps("city")}
+          />
           <CustomerFillField
             label="Township"
             placeholder="Enter Customer Township"
-            form={cutomerForm.getInputProps("township")}
+            form={customerForm.getInputProps("township")}
           />
           <CustomerFillField
             label="Address"
             placeholder="Enter Customer Address"
-            form={cutomerForm.getInputProps("address")}
+            form={customerForm.getInputProps("address")}
           />
           <CustomerFillField
             label="Job Title"
             placeholder="Enter Customer Job Title"
-            form={cutomerForm.getInputProps("jobTitle")}
+            form={customerForm.getInputProps("jobTitle")}
           />
-           <DateInput
-            label={<span className="font-medium">Date of Birth</span>}
+          <DateInput
+            label={
+              <span className="font-medium text-xs 2xl:text-sm">
+                Date of Birth
+              </span>
+            }
             placeholder="Enter your date of birth"
             radius={"md"}
             size="md"
-            required
             valueFormat="DD/MM/YYYY"
-            {...cutomerForm.getInputProps("dob")}
+            {...customerForm.getInputProps("dob")}
           />
           <Select
-            label={<span className="font-semibold">Gender</span>}
+            label={
+              <span className="font-semibold text-xs 2xl:text-sm">Gender</span>
+            }
             size="md"
             radius={"md"}
             data={["Male", "Female", "Others"]}
             placeholder="Select your gender"
-            required
+            defaultValue={""}
+            {...customerForm.getInputProps("gender")}
           />
         </div>
-        <div className="flex ml-auto justify-between w-[300px] px-6 mt-10">
+        <div className="flex  sm:ml-auto flex-col space-y-3 sm:space-y-0 sm:flex-row justify-between w-full sm:w-[300px] sm:pl-12 xl:pl-6 mt-10">
           <Button
             text="Cancel"
             bg="bg-white"

@@ -15,12 +15,12 @@ const CustomerAccountPage = () => {
     setOpenCreateAccountModal(!openCreateAccountModal);
 
   return (
-    <>
+    <section className="">
       <CreateBankAccountModal
         open={openCreateAccountModal}
         close={closeAccountModalHandler}
       />
-      <section className="mt-4 pl-4">
+      <section className="mt-4 pl-4 overflow-hidden">
         <div className="flex justify-between items-center w-full pl-2">
           <h2 className="text-2xl font-semibold my-3 text-gray-800">
             Account Lists
@@ -36,9 +36,11 @@ const CustomerAccountPage = () => {
             />
           </div>
         </div>
-        <CustomerDataTable data={accountList} columns={accountListsColumn} />
+       <div className="!overflow-hidden">
+       <CustomerDataTable data={accountList} columns={accountListsColumn} />
+       </div>
       </section>
-    </>
+    </section>
   );
 };
 

@@ -8,10 +8,10 @@ const CustomerFillField:React.FC<FieldProps> = ({
   return (
    <TextInput
     placeholder={placeholder}
-    label={<span className='font-semibold'>{label}</span>}
+    label={<p className='font-semibold text-xs 2xl:text-sm'>{label}</p>}
     radius={"md"}
     {...form}
-    required
+    
    />
   )
 }
@@ -21,5 +21,5 @@ export default CustomerFillField
 type FieldProps ={
     label:string,
     placeholder:string,
-    form?:any
+    form:any
 }

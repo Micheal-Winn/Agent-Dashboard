@@ -94,7 +94,7 @@ const ProfilePage = () => {
     console.log("profileData", profileData);
   };
   return (
-    <main className="bg-slate-50 h-screen overflow-y-scroll">
+    <main className="bg-slate-50 h-screen">
       <form
         onSubmit={ProfileForm.onSubmit(formSubmitHandler)}
         className="pt-6 pl-4 xl:pl-3 pr-2 sm:pr-5 pb-5 mb-4  xl:pb-10 mt-4 xl:mr-10 2xl:mr-20 shadow-slate-300 shadow-lg mx-3 bg-white rounded-lg"

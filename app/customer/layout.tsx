@@ -7,7 +7,7 @@ const CustomerListPageLayout = ({
     children:React.ReactNode;
 }) => {
   return (
-   <main>
+   <main className='overflow-y-scroll mb-1 h-screen'>
     <Header/>
     {children}
    </main>

@@ -3,7 +3,7 @@ import Header from "@/components/Header/Header";
 
 const ProfileRootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main>
+    <main className="h-screen overflow-y-scroll">
       <Header />
       {children}
     </main>
