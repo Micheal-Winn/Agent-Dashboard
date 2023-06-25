@@ -1,10 +1,11 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
-import { CustomerAccountsColumnProps } from "@/Types"
+import { TableData } from "@/Types"
 import { DataTableRowActions } from "@/components/utils/TableUtilties/data-table-row-actions"
+import CustomerDepositModal from "@/components/CustomerAccountsListTableComponents/customer.deposit.modal"
 
-export const accountListsColumn:ColumnDef<CustomerAccountsColumnProps>[] = [
+export const accountListsColumn:ColumnDef<TableData>[] = [
     {
         accessorKey:"name",
         header:"Customer Name"
@@ -35,7 +36,8 @@ export const accountListsColumn:ColumnDef<CustomerAccountsColumnProps>[] = [
     },
     {
         accessorKey:"status",
-        header:"Account Status"
+        header:"Account Status",
+        cell:({row})=> <CustomerDepositModal buttonText={`${row.original.accountStatus}`} accountNo={`${row.original.accountNo}`}/>
     },
     {
         id:"action",

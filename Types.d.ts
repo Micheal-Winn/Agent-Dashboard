@@ -87,7 +87,7 @@ interface nested{
 interface MobileNavLists{
     id:string,
     name:string,
-    path:string,
+    path:string | null,
     icon?:TablerIconsProps,
     nested?:Array<nested>,
     leftIcon?:ReactNode

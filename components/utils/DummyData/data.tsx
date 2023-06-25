@@ -798,12 +798,12 @@ import {
         {
           id: "tran2",
           name: "Transfer Report",
-          path: "/transaction/transaction-report",
+          path: "/transaction/query-date",
         },
         {
           id: "tran3",
           name: "Customer Inqury",
-          path: "/transaction/customer-inqury",
+          path: "/transaction/query-id",
         }
       ],
     },

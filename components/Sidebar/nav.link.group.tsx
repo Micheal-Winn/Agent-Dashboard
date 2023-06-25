@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 
 import { useMediaQuery } from "@mantine/hooks";
+// to replace path to current path using locaton.pathname
 
 interface status {
   activeStatus: string;
